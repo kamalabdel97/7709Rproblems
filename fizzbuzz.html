@@ -216,13 +216,116 @@ print(total)</code></pre>
 </div>
 <div id="matts-code" class="section level3">
 <h3>Matt’s Code</h3>
-<pre class="r"><code>answer &lt;- 1:100
-for(i in 1:100){
-  if(i%%3 == 0) answer[i] &lt;-&quot;fizz&quot;
-  if(i%%5 == 0) answer[i] &lt;-&quot;buzz&quot;
-  if(i%%5 == 0 &amp; i%%3 ==0) answer[i] &lt;-&quot;fizzbuzz&quot;
+<pre class="r"><code>answer &lt;- 1:100 # Creates initial variable of answer of values 1 to 100
+for(i in 1:100){ #Recreates loop to alter &quot;answer&quot; where it meets necessary conditions
+  if(i%%3 == 0) answer[i] &lt;-&quot;fizz&quot; #Replaces number in &quot;answer&quot; array with &quot;fizz&quot; because it is divisible by 3
+  if(i%%5 == 0) answer[i] &lt;-&quot;buzz&quot; #Replaces number in &quot;answer&quot; array with &quot;buzz&quot; because it is divisible by 5
+  if(i%%5 == 0 &amp; i%%3 ==0) answer[i] &lt;-&quot;fizzbuzz&quot; #Replaces number in &quot;answer&quot; array with &quot;fizzbuzz&quot; because it is divisible by both 5 and 3
 }
-print(answer)</code></pre>
+print(answer) #prints array of &quot;answer&quot;</code></pre>
+</div>
+<div id="kamal-abdelrahmans-code_p1" class="section level3">
+<h3>Kamal Abdelrahman’s Code_p1</h3>
+<pre class="r"><code>for (i in c(1:100)){
+ if(i%%3 == 0){
+  print(&quot;Fizz&quot;)
+ } 
+ if(i%%5 == 0){
+  print(&quot;Buzz&quot;)
+ }
+ if (i%%5 == 0 &amp; i%%3 ==0) {
+  print(&quot;FizzBuzz&quot;)
+ }
+}</code></pre>
+<pre><code>## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;FizzBuzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Fizz&quot;
+## [1] &quot;Buzz&quot;</code></pre>
+</div>
+<div id="kamal-abdelrahmans-code_p2" class="section level3">
+<h3>Kamal Abdelrahman’s Code_p2</h3>
+<div id="minor-remix-of-crump-code.-was-curious-to-see-if-the-else-if-was-necessary.-realized-that-the-as-long-as-the-the-first-if-is-false-function-will-go-to-next-if-until-it-hits-true-or-it-runs-out-of-ifs.-same-principle-with-if-then-else-if-statements." class="section level4">
+<h4>Minor remix of Crump Code. Was curious to see if the “else if” was necessary. Realized that the as long as the the first “if” is false, function will go to next if until it hits true or it runs out of ifs. Same principle with if then else if statements.</h4>
+</div>
+<div id="also-realized-that-storing-the-variables-and-editing-them-with-the-if-statements-is-way-more-accurate-than-just-using-if-statements.-use-the-conditions-to-replace-the-numbers-with-fizz-buzz-or-fizzbuzz-as-necessary" class="section level4">
+<h4>Also realized that storing the variables and editing them with the if statements is way more accurate than just using if statements. Use the conditions to replace the numbers with “Fizz”, “Buzz” or “FizzBuzz” as necessary</h4>
+<pre class="r"><code>NumOrWor &lt;- c(1:100)
+for (i in c(1:100)){
+ if (i%%3 == 0) {
+  NumOrWor[i] &lt;- &quot;Fizz&quot;
+    } else if(i%%5 == 0) {
+        NumOrWor[i] &lt;- &quot;Buzz&quot;
+    } else if(i%%5 == 0 &amp; i%%3 ==0) {
+        NumOrWor[i] &lt;- &quot;FizzBuzz&quot;
+    }
+}
+print(NumOrWor)</code></pre>
+<pre><code>##   [1] &quot;1&quot;    &quot;2&quot;    &quot;Fizz&quot; &quot;4&quot;    &quot;Buzz&quot; &quot;Fizz&quot; &quot;7&quot;    &quot;8&quot;    &quot;Fizz&quot; &quot;Buzz&quot;
+##  [11] &quot;11&quot;   &quot;Fizz&quot; &quot;13&quot;   &quot;14&quot;   &quot;Fizz&quot; &quot;16&quot;   &quot;17&quot;   &quot;Fizz&quot; &quot;19&quot;   &quot;Buzz&quot;
+##  [21] &quot;Fizz&quot; &quot;22&quot;   &quot;23&quot;   &quot;Fizz&quot; &quot;Buzz&quot; &quot;26&quot;   &quot;Fizz&quot; &quot;28&quot;   &quot;29&quot;   &quot;Fizz&quot;
+##  [31] &quot;31&quot;   &quot;32&quot;   &quot;Fizz&quot; &quot;34&quot;   &quot;Buzz&quot; &quot;Fizz&quot; &quot;37&quot;   &quot;38&quot;   &quot;Fizz&quot; &quot;Buzz&quot;
+##  [41] &quot;41&quot;   &quot;Fizz&quot; &quot;43&quot;   &quot;44&quot;   &quot;Fizz&quot; &quot;46&quot;   &quot;47&quot;   &quot;Fizz&quot; &quot;49&quot;   &quot;Buzz&quot;
+##  [51] &quot;Fizz&quot; &quot;52&quot;   &quot;53&quot;   &quot;Fizz&quot; &quot;Buzz&quot; &quot;56&quot;   &quot;Fizz&quot; &quot;58&quot;   &quot;59&quot;   &quot;Fizz&quot;
+##  [61] &quot;61&quot;   &quot;62&quot;   &quot;Fizz&quot; &quot;64&quot;   &quot;Buzz&quot; &quot;Fizz&quot; &quot;67&quot;   &quot;68&quot;   &quot;Fizz&quot; &quot;Buzz&quot;
+##  [71] &quot;71&quot;   &quot;Fizz&quot; &quot;73&quot;   &quot;74&quot;   &quot;Fizz&quot; &quot;76&quot;   &quot;77&quot;   &quot;Fizz&quot; &quot;79&quot;   &quot;Buzz&quot;
+##  [81] &quot;Fizz&quot; &quot;82&quot;   &quot;83&quot;   &quot;Fizz&quot; &quot;Buzz&quot; &quot;86&quot;   &quot;Fizz&quot; &quot;88&quot;   &quot;89&quot;   &quot;Fizz&quot;
+##  [91] &quot;91&quot;   &quot;92&quot;   &quot;Fizz&quot; &quot;94&quot;   &quot;Buzz&quot; &quot;Fizz&quot; &quot;97&quot;   &quot;98&quot;   &quot;Fizz&quot; &quot;Buzz&quot;</code></pre>
+</div>
 </div>
 
 

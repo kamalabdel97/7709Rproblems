@@ -37,12 +37,45 @@ print(total)
 ### Matt's Code
 
 ```{r,eval=F}
-answer <- 1:100
-for(i in 1:100){
-  if(i%%3 == 0) answer[i] <-"fizz"
-  if(i%%5 == 0) answer[i] <-"buzz"
-  if(i%%5 == 0 & i%%3 ==0) answer[i] <-"fizzbuzz"
+answer <- 1:100 # Creates initial variable of answer of values 1 to 100
+for(i in 1:100){ #Recreates loop to alter "answer" where it meets necessary conditions
+  if(i%%3 == 0) answer[i] <-"fizz" #Replaces number in "answer" array with "fizz" because it is divisible by 3
+  if(i%%5 == 0) answer[i] <-"buzz" #Replaces number in "answer" array with "buzz" because it is divisible by 5
+  if(i%%5 == 0 & i%%3 ==0) answer[i] <-"fizzbuzz" #Replaces number in "answer" array with "fizzbuzz" because it is divisible by both 5 and 3
 }
-print(answer)
+print(answer) #prints array of "answer"
+```
+
+### Kamal Abdelrahman's Code_p1
+
+```{r}
+for (i in c(1:100)){
+ if(i%%3 == 0){
+  print("Fizz")
+ } 
+ if(i%%5 == 0){
+  print("Buzz")
+ }
+ if (i%%5 == 0 & i%%3 ==0) {
+  print("FizzBuzz")
+ }
+}
+```
+
+### Kamal Abdelrahman's Code_p2
+####Minor remix of Crump Code. Was curious to see if the "else if" was necessary. Realized that the as long as the the first "if " is false, function will go to next if until it hits true or it runs out of ifs. Same principle with if then else if statements.
+####Also realized that storing the variables and editing them with the if statements is way more accurate than just using if statements. Use the conditions to replace the numbers with "Fizz", "Buzz" or "FizzBuzz" as necessary
+```{r}
+NumOrWor <- c(1:100)
+for (i in c(1:100)){
+ if (i%%3 == 0) {
+  NumOrWor[i] <- "Fizz"
+    } else if(i%%5 == 0) {
+        NumOrWor[i] <- "Buzz"
+    } else if(i%%5 == 0 & i%%3 ==0) {
+        NumOrWor[i] <- "FizzBuzz"
+    }
+}
+print(NumOrWor)
 ```
 
